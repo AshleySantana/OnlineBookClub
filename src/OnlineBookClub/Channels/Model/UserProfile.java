@@ -9,7 +9,7 @@ public class UserProfile {
     private String username;
     private String email;
     private List<ReadingGoal> readingGoals;
-    //private List<Channel> channels;
+    //private List<Channel> subscribedChannels;
     private Library library;
     private boolean subscriptionStatus;
     private String paymentType;
