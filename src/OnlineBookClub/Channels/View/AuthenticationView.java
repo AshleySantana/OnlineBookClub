@@ -30,7 +30,6 @@ public class AuthenticationView {
      * shows a error message
      * @param error --> the error message to display
      */
-    public voidshowErrorMessage(String error
-    ){
+    public void showErrorMessage(String error){
     };
 }
