@@ -8,6 +8,7 @@ public class UserProfile {
     //Attributes
     private String username;
     private String email;
+    private String password;
     private List<ReadingGoal> readingGoals;
     //private List<Channel> subscribedChannels;
     private Library library;
@@ -16,4 +17,30 @@ public class UserProfile {
     private int paymentInfo;
     private String userSubscription;
     private ImageIcon profile;
+
+
+    //METHODS
+    /** getUsername()
+     * Gets the username.
+     * @return The username.
+     */
+    public String getUsername() {
+        return username;
+    }
+
+    /** getEmail()
+     * Gets the email.
+     * @return The email.
+     */
+    public String getEmail() {
+        return email;
+    }
+
+    /** getPassword()
+     * Gets the password.
+     * @return The password.
+     */
+    public String getPassword() {
+        return password;
+    }
 }
