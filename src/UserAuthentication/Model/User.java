@@ -1,10 +1,12 @@
-package OnlineBookClub.Channels.Model;
+package UserAuthentication.Model;
+
+import Homepage.Model.Library;
+import Homepage.Model.ReadingGoal;
 
 import javax.swing.*;
-import java.nio.channels.Channel;
 import java.util.List;
 
-public class UserProfile {
+public class User {
     //Attributes
     private String username;
     private String email;

@@ -1,4 +1,4 @@
-package OnlineBookClub.Channels.View;
+package UserAuthentication.View;
 
 public class AuthenticationView {
 

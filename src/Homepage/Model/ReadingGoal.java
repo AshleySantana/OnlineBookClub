@@ -1,4 +1,4 @@
-package OnlineBookClub.Channels.Model;
+package Homepage.Model;
 
 public class ReadingGoal {
     //Attributes

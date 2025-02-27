@@ -1,7 +1,7 @@
-package OnlineBookClub.Channels.Controller;
+package UserAuthentication.Controller;
 
-import OnlineBookClub.Channels.Model.UserAuthentication;
-import OnlineBookClub.Channels.Model.UserProfile;
+import UserAuthentication.Model.UserAuthentication;
+import UserAuthentication.Model.User;
 
 public class AuthenticationController {
     //Attributes
@@ -29,7 +29,7 @@ public class AuthenticationController {
      * handles user logout
      * @param user
      */
-    public void handleLogout(UserProfile user){
+    public void handleLogout(User user){
     };
 
 }
