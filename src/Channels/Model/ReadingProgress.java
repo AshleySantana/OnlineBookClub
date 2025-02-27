@@ -1,4 +1,4 @@
-package OnlineBookClub.Channels.Model;
+package Channels.Model;
 
 import Homepage.Model.Book;
 
