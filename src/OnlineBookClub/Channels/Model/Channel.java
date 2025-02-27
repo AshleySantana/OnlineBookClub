@@ -7,4 +7,5 @@ public class Channel {
     Image BookImage;
 
     public Channel(String channelName){}
+    public Channel(String channelName, String lop){}
 }
