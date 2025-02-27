@@ -1,5 +1,16 @@
 package SubManagement.Model;
 
+/**
+ * This class represents a user's subscription plan that includes fields for:
+ * - subscription status
+ * - description
+ * - current subscription plan
+ *
+ * All methods and fields are directly related to managing sub details which means the LCOm4 measure for this class
+ * would be low. There is high cohesion in this class since it deals with exclusively, subscription-related
+ * operations, and all methods are focused on interacting with the subscription data (status, description, etc.).
+ */
+
 public class SubPlans {
     private String subStatus;  // Changed to String
     private String subDescription;
