@@ -1,4 +1,4 @@
-package OnlineBookClub.Channels.Model;
+package UserAuthentication.Model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,6 +9,7 @@ public class UserAuthentication {
 
 
     //METHODS
+    
     /** register()
      * Registers a new user with a username, email, and password
      * @param username User's username

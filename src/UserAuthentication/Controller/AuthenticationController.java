@@ -1,7 +1,6 @@
-package OnlineBookClub.Channels.Controller;
+package UserAuthentication.Controller;
 
-import OnlineBookClub.Channels.Model.UserAuthentication;
-import OnlineBookClub.Channels.Model.User;
+import UserAuthentication.Model.UserAuthentication;
 
 public class AuthenticationController {
     //Attributes
