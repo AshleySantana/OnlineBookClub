@@ -17,7 +17,7 @@ public class UserAuthentication {
      * @param username User's username
      * @param email User's email
      * @param password User's password
-     * @return the newly created UserProfile if successful, otherwaise null
+     * @return the newly created User if successful, otherwaise null
      */
     public User register(String username, String email, String password){
         return null;
@@ -27,7 +27,7 @@ public class UserAuthentication {
      * Logs in a user with a username and password
      * @param username User's username
      * @password password User's password
-     * @return the UserProfile if login is successful, otherwise null
+     * @return the User if login is successful, otherwise null
      */
     public User login (String username, String pasword){
         return null;
