@@ -1,4 +1,4 @@
-package Homepage.Controller;
+package Channels.Controller;
 
 import UserAuthentication.Model.User;
 
