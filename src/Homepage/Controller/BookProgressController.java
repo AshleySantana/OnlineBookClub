@@ -1,4 +1,4 @@
-package OnlineBookClub.Channels.Controller;
+package Homepage.Controller;
 
 import OnlineBookClub.Channels.Model.ReadingProgress;
 
