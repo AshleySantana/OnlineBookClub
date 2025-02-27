@@ -8,4 +8,7 @@ public class Library {
     //Attributes
     List<Book> booksRead;
     List<Book> booksToRead;
+
+    public void addContent(String content) {
+    }
 }
