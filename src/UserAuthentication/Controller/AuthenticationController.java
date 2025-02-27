@@ -1,12 +1,7 @@
 package UserAuthentication.Controller;
 
-<<<<<<< HEAD:src/UserAuthentication/Controller/AuthenticationController.java
 import UserAuthentication.Model.UserAuthentication;
 import UserAuthentication.Model.User;
-=======
-import OnlineBookClub.Channels.Model.UserAuthentication;
-import OnlineBookClub.Channels.Model.User;
->>>>>>> 21947815c80eae5b71d619928ea13527d682d7be:src/OnlineBookClub/Channels/Controller/AuthenticationController.java
 
 public class AuthenticationController {
     //Attributes
