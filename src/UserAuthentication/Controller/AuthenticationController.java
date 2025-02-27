@@ -1,7 +1,6 @@
 package UserAuthentication.Controller;
 
 import UserAuthentication.Model.UserAuthentication;
-import UserAuthentication.Model.User;
 
 public class AuthenticationController {
     //Attributes

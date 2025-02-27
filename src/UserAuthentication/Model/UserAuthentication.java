@@ -1,7 +1,5 @@
 package UserAuthentication.Model;
 
-import UserAuthentication.Model.User;
-
 import java.util.ArrayList;
 import java.util.List;
 
