@@ -2,6 +2,17 @@ package SubManagement.View;
 
 import SubManagement.Model.SubPlans;
 
+/**
+ * ViewSubPlans displays details about user's subscription plan:
+ * - sub status
+ * - description
+ * - current sub
+ *
+ * The LCOM4 measure for this class is also low as all methods are focused on displaying different aspects of a
+ * sub plan. Each method operates on the 'SubPlans' data to ensure high cohesion within the class. All methods
+ * contribute to presenting subscription-related information.
+ */
+
 public class ViewSubPlans {
 
     public void displaySubscriptionDetails(SubPlans subPlans) {
