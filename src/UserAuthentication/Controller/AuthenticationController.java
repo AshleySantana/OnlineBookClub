@@ -1,5 +1,6 @@
 package UserAuthentication.Controller;
 
+import UserAuthentication.Model.User;
 import UserAuthentication.Model.UserAuthentication;
 
 public class AuthenticationController {

@@ -3,6 +3,6 @@ package Homepage.Controller;
 import OnlineBookClub.Channels.Model.ReadingProgress;
 
 public class BookProgressController {
-    //Attribtues
+    //Attributes
     ReadingProgress readingProgress;
 }
