@@ -1,4 +1,7 @@
-package OnlineBookClub.Channels.Model;
+package UserAuthentication.Model;
+
+import Homepage.Model.Library;
+import Homepage.Model.ReadingGoal;
 
 import javax.swing.*;
 import java.util.List;

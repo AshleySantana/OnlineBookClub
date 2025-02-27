@@ -1,4 +1,6 @@
-package OnlineBookClub.Channels.Model;
+package Homepage.Model;
+
+import Homepage.Model.Book;
 
 import java.util.List;
 
