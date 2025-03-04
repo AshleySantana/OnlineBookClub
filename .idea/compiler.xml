@@ -2,7 +2,6 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
-      <module name="TestHarness" target="20" />
       <module name="TestHarness.main" target="20" />
       <module name="TestHarness.test" target="20" />
     </bytecodeTargetLevel>
