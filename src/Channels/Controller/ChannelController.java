@@ -32,15 +32,21 @@ import Channels.Model.Comment;
         public void setChannel(Channel channel) {
             this.channel = channel;
         }
-        public Channel createChannel(){return channel;}
-        public void deleteChannel(){}
-
         public Comment getComment() {
             return comment;
         }
         public void setComment(Comment comment) {
             this.comment = comment;
         }
+
+        /**
+         * Method stubs
+         * You can create and delete a channel
+         * And you can create or delete a comment within each channel
+         * @return
+         */
+        public Channel createChannel(){return channel;}
+        public void deleteChannel(){}
         public Comment createComment(){return comment;}
         public void deleteComment(){}
 

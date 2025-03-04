@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/OnlineBookClub.iml" filepath="$PROJECT_DIR$/.idea/OnlineBookClub.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TestHarness.iml" filepath="$PROJECT_DIR$/TestHarness.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TestHarness.main.iml" filepath="$PROJECT_DIR$/.idea/modules/TestHarness.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TestHarness.test.iml" filepath="$PROJECT_DIR$/.idea/modules/TestHarness.test.iml" />
     </modules>
   </component>
 </project>
