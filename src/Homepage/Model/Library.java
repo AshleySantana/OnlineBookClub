@@ -9,6 +9,27 @@ public class Library {
     List<Book> booksRead;
     List<Book> booksToRead;
 
-    public void addContent(String content) {
+
+    //CONSTRUCTOR
+    public Library(List<Book> booksRead, List<Book> booksToRead) {
+        this.booksRead = booksRead;
+        this.booksToRead = booksToRead;
+    }
+
+
+    //METHODS
+
+    public List<Book> getBooksRead() {
+        return booksRead;
+    }
+    public List<Book> getBooksToRead() {
+        return booksToRead;
+    }
+
+    public void setBooksRead(List<Book> booksRead) {
+        this.booksRead = booksRead;
+    }
+    public void setBooksToRead(List<Book> booksToRead) {
+        this.booksToRead = booksToRead;
     }
 }
