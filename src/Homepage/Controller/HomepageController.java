@@ -11,7 +11,6 @@ public class HomepageController {
         this.userProfile = userProfile;
     }
 
-
     //METHODS
     public User getUserProfile() {
         return userProfile;
