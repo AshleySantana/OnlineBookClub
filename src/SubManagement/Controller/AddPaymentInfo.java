@@ -10,7 +10,7 @@ package SubManagement.Controller;
  * payment details are properly set, the methods work together. There is high cohesion in this class as all
  * methods focused on adding payment-related data.
  *
- * hello
+ * hi
  */
 
 public class AddPaymentInfo {
