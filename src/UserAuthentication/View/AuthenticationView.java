@@ -3,8 +3,6 @@ package UserAuthentication.View;
 public class AuthenticationView {
 
 
-
-
     //METHODS
 
     /** displayLoginScreen()

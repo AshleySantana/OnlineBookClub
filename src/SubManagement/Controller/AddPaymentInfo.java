@@ -9,6 +9,8 @@ package SubManagement.Controller;
  * The LCOM4 measure is low as all methods are directly related to adding or managing payment info. To ensure the
  * payment details are properly set, the methods work together. There is high cohesion in this class as all
  * methods focused on adding payment-related data.
+ *
+ * hello
  */
 
 public class AddPaymentInfo {
