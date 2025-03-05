@@ -28,5 +28,6 @@ public class BookProgressController {
      * @param progress the progress percentage of the book
      */
     public void updateProgress(String name, double progress) {
+        System.out.println("Updating progress to " + progress + "%");
     }
 }

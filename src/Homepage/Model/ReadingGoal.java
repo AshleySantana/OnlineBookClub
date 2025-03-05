@@ -2,9 +2,9 @@ package Homepage.Model;
 
 public class ReadingGoal {
     //Attributes
-    int targetBooks;
-    String timeframe;
-    int booksRead;
+    private int targetBooks;
+    private String timeframe;
+    private int booksRead;
 
     //CONSTRUCTOR
     public ReadingGoal(int targetBooks, String timeframe, int booksRead) {
@@ -32,5 +32,20 @@ public class ReadingGoal {
     }
     public void setBooksRead(int booksRead) {
         this.booksRead = booksRead;
+    }
+
+    /**
+     * Increments the number of books read.
+     */
+    public void incrementBooksRead() {
+        this.booksRead++;
+    }
+
+    /**
+     * Checks if the reading goal is met.
+     * @return true if booksRead >= targetBooks, false otherwise
+     */
+    public boolean isGoalMet() {
+        return booksRead >= targetBooks;
     }
 }

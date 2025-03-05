@@ -11,12 +11,18 @@ public class HomepageController {
         this.userProfile = userProfile;
     }
 
+
     //METHODS
     public User getUserProfile() {
         return userProfile;
     }
-
     public void setUserProfile(User userProfile) {
         this.userProfile = userProfile;
     }
-}
+
+
+        public void displayHomepage() {
+            System.out.println("Displaying the Homepage...");
+        }
+    }
+

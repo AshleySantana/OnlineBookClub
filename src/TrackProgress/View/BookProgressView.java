@@ -22,8 +22,10 @@ public class BookProgressView {
 
     /** displayReadingProgress(book)
      * Displays the reading progress of a given book.
-     * @param book the book whose reading progress is to be displayed
+     * @param bookTitle the book whose reading progress is to be displayed
      */
-    public void displayReadingProgress(Book book) {
+    public void displayProgress(String bookTitle, Book progress) {
+        System.out.println("Book: " + bookTitle + " - Progress: " + progress + "%");
     }
+
 }
