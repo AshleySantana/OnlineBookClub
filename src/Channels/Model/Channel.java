@@ -3,8 +3,10 @@ package Channels.Model;
 import Homepage.Model.Book;
 
 import java.awt.*;
+import java.util.ArrayList;
 
 public class Channel {
+    ArrayList<Comment> channelComments = new ArrayList<>();
     /**
      * The name of the channel.
      */
@@ -67,6 +69,12 @@ public class Channel {
     public void setBookImage(Image bookImage) {
         this.BookImage = bookImage;
     }
+
+   public Channel(String channelName, Book book, Image bookImage){
+        this.channelName = channelName;
+        this.book = book;
+        this.BookImage = bookImage;
+   }
     /**
      * Constructs a {@code Channel} object with the specified channel name.
      *
@@ -83,6 +91,16 @@ public class Channel {
      */
     public Channel(String channelName, String lop) {
         this.channelName = channelName;
+    }
+
+    public void addComment(Comment comment){
+        channelComments.add(comment);
+    }
+
+    public void showAllCommentsInChannel(){
+        for (Comment comment : channelComments) {
+           comment.showComment();
+        }
     }
 
 }
