@@ -3,6 +3,9 @@ package TestHarness;
 import Channels.Model.Channel;
 import Channels.Model.Comment;
 import Homepage.Model.Book;
+import Homepage.Model.Library;
+import Homepage.Model.ReadingGoal;
+import TrackProgress.Model.ReadingProgress;
 import UserAuthentication.Model.User;
 
 import javax.swing.*;
@@ -23,6 +26,11 @@ public class TestHarness {
         Book book1 = new Book(defaultImage, "Queen of Abith", "Amna Cloud", false, 00);
         Book book2 = new Book(defaultImage, "Ray Franke", "Benny Bool", false, 00);
         Book book3 = new Book(defaultImage, "Half of a Yellow Sun", "Chimamanda Adichie", false, 00);
+
+        book1.displayBookInfo();
+        book2.displayBookInfo();
+        book3.displayBookInfo();
+
 
         log("Creating Book Channels:");
         Channel channel1 = new Channel("For the Yearners", book1, defaultImage);
@@ -71,8 +79,31 @@ public class TestHarness {
         channel3.addComment(new Comment(user3.getUsername(), "I need a movie adaptation ASAP"));
         channel3.addComment(new Comment(user1.getUsername(), "There's a movie on Prime! Me and my cousin just watched it"));
         channel3.showAllCommentsInChannel();
-    }
 
+
+        // Testing Library class
+        ArrayList<Book> booksRead = new ArrayList<>();
+        ArrayList<Book> booksToRead = new ArrayList<>();
+
+        booksRead.add(book2);
+        booksToRead.add(book1);
+
+        Library library = new Library(booksRead, booksToRead);
+
+        System.out.println("Books Read: " + library.getBooksRead().size());
+        System.out.println("Books to Read: " + library.getBooksToRead().size());
+
+        // Testing ReadingGoal class
+        ReadingGoal goal = new ReadingGoal(5, "Monthly", 1);
+        System.out.println("Goal Met? " + goal.isGoalMet());
+        goal.incrementBooksRead();
+        System.out.println("Books Read: " + goal.getBooksRead());
+
+        // Testing ReadingProgress class
+        ReadingProgress progress = new ReadingProgress(300);
+        progress.updateProgress(50);
+        System.out.println("Progress: " + progress.getProgressPercentage() + "%");
+    }
 private void log(String string){
     System.out.println(string);
 }

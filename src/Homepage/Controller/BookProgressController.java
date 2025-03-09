@@ -1,6 +1,6 @@
 package Homepage.Controller;
 
-import Channels.Model.ReadingProgress;
+import TrackProgress.Model.ReadingProgress;
 
 public class BookProgressController {
     //Attributes

@@ -125,5 +125,8 @@ public class ReadingProgress {
             System.out.println("Book not found in reading list.");
         }
     }
+    public double getProgressPercentage() {
+        return (double) pagesRead / totalPages * 100;
+    }
 }
 
