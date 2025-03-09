@@ -15,6 +15,7 @@ public class User {
     private String password;
     private List<ReadingGoal> readingGoals;
 
+
     public ArrayList<Channel> getSubscribedChannels() {
         if (subscribedChannels == null) {
             subscribedChannels = new ArrayList<>(); // Ensure it is initialized before returning
@@ -29,9 +30,9 @@ public class User {
     private ArrayList<Channel> subscribedChannels;
     private Library library;
     private boolean subscriptionStatus;
-    private String paymentType;
+    public String paymentType;
     private int paymentInfo;
-    private String userSubscription;
+    public String userSubscription;
     private ImageIcon profile;
 
 
@@ -101,6 +102,19 @@ public class User {
         } else {
             System.out.println("You are not subscribed to: " + channel.getChannelName());
         }
+    }
+
+    // Change subscription status
+    public void changeSubscriptionStatus(String newSubscriptionStatus) {
+        this.userSubscription = newSubscriptionStatus;
+        System.out.println(getUsername() + " changed subscription to: " + newSubscriptionStatus);
+    }
+
+    // Change payment info
+    public void changePaymentInfo(String newPaymentType, int newPaymentInfo) {
+        this.paymentType = newPaymentType;
+        this.paymentInfo = newPaymentInfo;
+        System.out.println(getUsername() + " updated payment details. Payment Type: " + newPaymentType + ", Payment Info: " + newPaymentInfo);
     }
 
 }

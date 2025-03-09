@@ -5,6 +5,7 @@ import Channels.Model.Comment;
 import Homepage.Model.Book;
 import Homepage.Model.Library;
 import Homepage.Model.ReadingGoal;
+import SubManagement.Controller.AddPaymentInfo;
 import TrackProgress.Model.ReadingProgress;
 import UserAuthentication.Model.User;
 
@@ -19,6 +20,8 @@ public class TestHarness {
         User user1 = new User("JDog51");
         User user2 = new User("JillScott");
         User user3 = new User("SereinaW");
+        User user4 = new User("John_doe"); // subscription & payment example
+
 
         log("Creating Books");
         Image defaultImage = new ImageIcon().getImage();
@@ -103,6 +106,25 @@ public class TestHarness {
         ReadingProgress progress = new ReadingProgress(300);
         progress.updateProgress(50);
         System.out.println("Progress: " + progress.getProgressPercentage() + "%");
+
+        // Print initial user details
+        System.out.println("Initial User Subscription: " + user4.userSubscription);
+        System.out.println("Initial Payment Type: " + user4.paymentType);
+
+        // Changing subscription status
+        user4.changeSubscriptionStatus("Premium Plan");
+
+        // Changing payment information
+        user4.changePaymentInfo("PayPal", 987654321);
+
+        // You can also test adding payment details
+        AddPaymentInfo.addPaymentFullName("John", "Doe");
+        AddPaymentInfo.addPaymentType("PayPal");
+        AddPaymentInfo.addPaymentInfo(987654321);
+
+        // Print final user details
+        System.out.println("\nUpdated User Subscription: " + user4.userSubscription);
+        System.out.println("Updated Payment Type: " + user4.paymentType);
     }
 private void log(String string){
     System.out.println(string);
