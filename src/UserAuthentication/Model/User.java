@@ -3,17 +3,47 @@ package UserAuthentication.Model;
 import Channels.Model.Channel;
 import Homepage.Model.Library;
 import Homepage.Model.ReadingGoal;
+import SubManagement.Model.SubPlans;
 
 import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class User {
-    //Attributes
+    // Attributes
     private String username;
     private String email;
     private String password;
     private List<ReadingGoal> readingGoals;
+
+    private ArrayList<Channel> subscribedChannels;
+    private Library library;
+    private boolean subscriptionStatus;
+    public String paymentType;
+    public int paymentInfo;
+    private SubPlans currentSubscription; // This stores the user's current subscription plan
+    private ImageIcon profile;
+
+    // Getters and Setters
+    public String getUsername() {
+        return username;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public SubPlans getCurrentSubscription() {
+        return currentSubscription;
+    }
+
+    public void setCurrentSubscription(SubPlans currentSubscription) {
+        this.currentSubscription = currentSubscription;
+    }
 
     public ArrayList<Channel> getSubscribedChannels() {
         if (subscribedChannels == null) {
@@ -26,41 +56,16 @@ public class User {
         this.subscribedChannels = subscribedChannels;
     }
 
-    private ArrayList<Channel> subscribedChannels;
-    private Library library;
-    private boolean subscriptionStatus;
-    private String paymentType;
-    private int paymentInfo;
-    private String userSubscription;
-    private ImageIcon profile;
-
-
-    //METHODS
-    /** getUsername()
-     * Gets the username.
-     * @return The username.
-     */
-    public String getUsername() {
-        return username;
+    public String getPaymentType() {
+        return paymentType;
     }
 
-    /** getEmail()
-     * Gets the email.
-     * @return The email.
-     */
-    public String getEmail() {
-        return email;
+    public int getPaymentInfo() {
+        return paymentInfo;
     }
 
-    /** getPassword()
-     * Gets the password.
-     * @return The password.
-     */
-    public String getPassword() {
-        return password;
-    }
-
-    public User(String username, String email, String password, List<ReadingGoal> readingGoals, Library library, boolean subscriptionStatus, String paymentType, int paymentInfo, String userSubscription, ImageIcon profile) {
+    // Constructor for creating a user
+    public User(String username, String email, String password, List<ReadingGoal> readingGoals, Library library, boolean subscriptionStatus, String paymentType, int paymentInfo, SubPlans currentSubscription, ImageIcon profile) {
         this.username = username;
         this.email = email;
         this.password = password;
@@ -69,15 +74,17 @@ public class User {
         this.subscriptionStatus = subscriptionStatus;
         this.paymentType = paymentType;
         this.paymentInfo = paymentInfo;
-        this.userSubscription = userSubscription;
+        this.currentSubscription = currentSubscription;
         this.profile = profile;
         this.subscribedChannels = new ArrayList<>();
     }
 
-    public User(String username){
+    // Constructor for creating a user with basic details
+    public User(String username) {
         this.username = username;
     }
-    public User(String username, String email, String password){
+
+    public User(String username, String email, String password) {
         this.username = username;
         this.email = email;
         this.password = password;
@@ -88,7 +95,7 @@ public class User {
     public void subscribeToChannel(Channel channel) {
         if (!getSubscribedChannels().contains(channel)) {
             subscribedChannels.add(channel);
-            System.out.println(getUsername() +" Subscribed to: " + channel.getChannelName());
+            System.out.println(getUsername() + " Subscribed to: " + channel.getChannelName());
         } else {
             System.out.println("You're already subscribed to " + channel.getChannelName());
         }
@@ -97,10 +104,23 @@ public class User {
     // Unsubscribe from a channel only if the user is subscribed
     public void unsubscribeFromChannel(Channel channel) {
         if (getSubscribedChannels().remove(channel)) {
-            System.out.println(getUsername() +" Successfully unsubscribed from: " + channel.getChannelName());
+            System.out.println(getUsername() + " Successfully unsubscribed from: " + channel.getChannelName());
         } else {
             System.out.println("You are not subscribed to: " + channel.getChannelName());
         }
     }
 
+    // Method to change the user's subscription plan
+    public void changeSubscription(SubPlans newPlan) {
+        // If the user is currently subscribed, store the previous plan
+        if (currentSubscription != null) {
+            System.out.println("Switching from " + currentSubscription.getSubDescription() + " to " + newPlan.getSubDescription());
+        } else {
+            System.out.println("No current subscription found. Subscribing to: " + newPlan.getSubDescription());
+        }
+
+        // Change to the new subscription
+        this.currentSubscription = newPlan;
+        System.out.println("Successfully switched to " + newPlan.getSubDescription() + " plan.");
+    }
 }

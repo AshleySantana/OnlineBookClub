@@ -6,15 +6,12 @@ import SubManagement.Model.SubPlans;
  * ModifySubs is a class that modifies a user's subscription plan:
  * - methods to add, delete, and change the sub plan
  *
- * There is low expectancy for this class as the methods relate to modifying the sub status or the plan itself
- * to ensure high cohesion. The class is focused on modifying sub plans and manages / updates sub data
- * which means they are semantically related.
+ * The class is focused on modifying subscription plans, ensuring high cohesion in managing and updating subscription data.
  */
-
 public class ModifySubs {
 
     // Method to modify subscriptions
-    public void ModifySubs(SubPlans subPlans) {
+    public void modifySubscription(SubPlans subPlans) {
         addSub(subPlans, true);  // Example to add subscription
         deleteSub(subPlans, false);  // Example to delete subscription
         changeSub(subPlans);  // Example to change subscription
