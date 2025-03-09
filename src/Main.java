@@ -1,9 +1,9 @@
-import TestHarness.Testharness;
+import TestHarness.TestHarness;
 
 public class Main {
     public static void main(String[] args) {
 
-        new Testharness();
+        new TestHarness();
 
 
 

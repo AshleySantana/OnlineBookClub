@@ -1,11 +1,12 @@
 package SubManagement.Controller;
 
+import UserAuthentication.Model.User;
+
 /**
  * AddPaymentInfo provides methods to add payment-related info:
  * - user's full name on payment method
  * - payment type
  * - payment number
- *
  * ChangePaymentInfo provides methods to change payment-related info:
  * - user's full name on payment method
  * - payment type
@@ -18,6 +19,20 @@ package SubManagement.Controller;
 
 public class AddPaymentInfo {
     // Methods to add payment info
+
+
+    public static void addPaymentInfo(User user, String paymentType, int paymentNumberInfo) {
+        user.paymentType = paymentType; // Directly modify paymentType of the user
+        user.paymentInfo = paymentNumberInfo; // Directly modify paymentInfo of the user
+        System.out.println("Payment Info Added for " + user.getUsername() + ": " + paymentType + " - " + paymentNumberInfo);
+    }
+
+    // Method to change payment information
+    public static void changePaymentInfo(User user, String paymentType, int paymentNumberInfo) {
+        user.paymentType = paymentType; // Directly modify paymentType of the user
+        user.paymentInfo = paymentNumberInfo; // Directly modify paymentInfo of the user
+        System.out.println("Payment Info Changed for " + user.getUsername() + ": " + paymentType + " - " + paymentNumberInfo);
+    }
     public static void addPaymentFullName(String paymentFName, String paymentLName) {
         System.out.println("Full Name Added: " + paymentFName + " " + paymentLName);
     }

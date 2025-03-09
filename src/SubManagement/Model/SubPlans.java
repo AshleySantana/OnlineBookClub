@@ -5,7 +5,6 @@ package SubManagement.Model;
  * - subscription status
  * - description
  * - current subscription plan (could refer to previous/active subscription)
- *
  * All methods and fields are directly related to managing sub details, ensuring low LCOM4 and high cohesion.
  * The class focuses solely on subscription-related operations, making it well-designed for its purpose.
  */
@@ -49,9 +48,9 @@ public class SubPlans {
         return currentSub;
     }
 
-    public void setCurrentSub(SubPlans currentSub) {
-        this.currentSub = currentSub;
-    }
+//    public void setCurrentSub(SubPlans currentSub) {
+//        this.currentSub = currentSub;
+//    }
 
     // Method to change the subscription (store the old one and update the current subscription)
     public void changeSubscription(String newSubStatus, String newSubDescription) {

@@ -54,4 +54,8 @@ public class Comment {
     public void setUserComment(String userComment) {
         this.userComment = userComment;
     }
+
+    public void showComment(){
+        System.out.println( getUserName() + " \n \t" + getUserComment());
+    }
 }

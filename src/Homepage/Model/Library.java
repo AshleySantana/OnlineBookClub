@@ -32,4 +32,8 @@ public class Library {
     public void setBooksToRead(List<Book> booksToRead) {
         this.booksToRead = booksToRead;
     }
+
+    public void listBooks() {
+        System.out.println("Listing books in the library...");
+    }
 }
