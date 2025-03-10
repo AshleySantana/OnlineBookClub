@@ -6,7 +6,7 @@
 
 Ashley - Added methods stubs for the Channel Controller class
 
-Manali
+Manali- added and tested Meeting model as well as adding method stubs. 
 
 Britney - Implemented method stubs for every method exposed in the SubManagement 
 Module and User class related to subscription and payment. Added related methods
