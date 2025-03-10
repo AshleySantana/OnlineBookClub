@@ -136,7 +136,6 @@ public class TestHarness {
         String meetingNametest = "Weekly Comic Book Meeting";
         String meetingLinkTest = "www.test.com";
 
-
         Meeting meeting = new Meeting(dateTest,timeTest,meetingNametest,meetingLinkTest);
 
         System.out.println("Testing Meeting model");
