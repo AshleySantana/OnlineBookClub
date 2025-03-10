@@ -4,7 +4,7 @@
 ---
 3/9 M02 - M03: System Component API Stubs and Automated System Tests
 
-Ashley -
+Ashley - Added methods stubs for the Channel Controller class
 
 Manali
 
