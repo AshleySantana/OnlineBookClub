@@ -12,9 +12,9 @@ Britney - Implemented method stubs for every method exposed in the SubManagement
 Module and User class related to subscription and payment. Added related methods
 in TestHarness class to exercise those methods.
 
-Stephanie
+Stephanie - Created, refactored and tested functions toward implementing the Channel class
 
-Sereina
+Sereina - Created, refactored and tested functions toward implementing the Track Progress, library, and reading goal classes
 
 ---
 Previous Assignment
