@@ -5,13 +5,17 @@ import Channels.Model.Comment;
 import Homepage.Model.Book;
 import Homepage.Model.Library;
 import Homepage.Model.ReadingGoal;
+import MeetingBookClub.Model.Meeting;
 import SubManagement.Controller.AddPaymentInfo;
 import TrackProgress.Model.ReadingProgress;
 import UserAuthentication.Model.User;
 
 import javax.swing.*;
 import java.awt.*;
+import java.sql.Time;
+import java.time.Instant;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class TestHarness {
     public TestHarness(){
@@ -125,6 +129,21 @@ public class TestHarness {
         // Print final user details
         System.out.println("\nUpdated User Subscription: " + user4.userSubscription);
         System.out.println("Updated Payment Type: " + user4.paymentType);
+
+        //Testing the Meeting Class
+        Date dateTest = Date.from(Instant.now());
+        Time timeTest = Time.valueOf("10:48:00");
+        String meetingNametest = "Weekly Comic Book Meeting";
+        String meetingLinkTest = "www.test.com";
+
+
+        Meeting meeting = new Meeting(dateTest,timeTest,meetingNametest,meetingLinkTest);
+
+        System.out.println("Testing Meeting model");
+        System.out.println("Date:"+ meeting.getMeetingDate());
+        System.out.println("Time"+ meeting.getMeetingTime());
+        System.out.println("Meeting Name:" + meeting.getMeetingName());
+        System.out.println("Meeting Link"+meeting.getMeetingLink());
     }
 private void log(String string){
     System.out.println(string);
