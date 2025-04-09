@@ -81,7 +81,6 @@ public class User {
         this.username = username;
         this.email = email;
         this.password = password;
-        this.subscribedChannels = new ArrayList<>();
     }
 
     // Subscribe to a channel only if not already subscribed

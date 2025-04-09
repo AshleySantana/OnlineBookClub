@@ -1,5 +1,10 @@
 # OnlineBookClub
-
+Design Patterns
+- Subscription Management: Command Pattern, Wizard Pattern
+- Track Progress: Observer Pattern, Dashboard Pattern
+- Channels: Builder, Follow Pattern
+- Homepage & User: Observer Pattern, Infinite Scroll Pattern
+- Meetings: (add patterns Manali)
 
 ---
 3/9 M02 - M03: System Component API Stubs and Automated System Tests
