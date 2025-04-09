@@ -8,4 +8,6 @@ public class AuthenticationView {
     private JTextField userNameTextField;
     private JLabel passwordLabel;
     private JTextField passwordFill;
+    private JButton forgetPasswordButton;
+    private JButton loginButton;
 }
