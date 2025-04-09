@@ -33,7 +33,7 @@ public class User {
     public String paymentType;
     private int paymentInfo;
     public String userSubscription;
-    private ImageIcon profile;
+    private ImageIcon profilePicture;
 
 
     //METHODS
@@ -61,17 +61,15 @@ public class User {
         return password;
     }
 
-    public User(String username, String email, String password, List<ReadingGoal> readingGoals, Library library, boolean subscriptionStatus, String paymentType, int paymentInfo, String userSubscription, ImageIcon profile) {
+    public User(String username, String email, String password, List<ReadingGoal> readingGoals, Library library, boolean subscriptionStatus, String paymentType, int paymentInfo, String userSubscription, ImageIcon profilePicture) {
         this.username = username;
         this.email = email;
         this.password = password;
         this.readingGoals = readingGoals;
         this.library = library;
         this.subscriptionStatus = subscriptionStatus;
-        this.paymentType = paymentType;
-        this.paymentInfo = paymentInfo;
         this.userSubscription = userSubscription;
-        this.profile = profile;
+        this.profilePicture = profilePicture;
         this.subscribedChannels = new ArrayList<>();
     }
 
