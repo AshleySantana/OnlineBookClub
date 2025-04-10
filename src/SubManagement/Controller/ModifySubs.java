@@ -26,6 +26,7 @@ public class ModifySubs {
     }
 
     // Delete subscription
+    // Uses command pattern
     public void deleteSub(SubPlans currentSub, boolean subStatus) {
         System.out.println("Deleting Subscription: " + currentSub.getSubDescription() + " with status: " + subStatus);
     }

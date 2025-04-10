@@ -1,10 +1,32 @@
 # OnlineBookClub
 Design Patterns
-- Subscription Management: Command Pattern, Wizard Pattern
-- Track Progress: Observer Pattern, Dashboard Pattern
-- Channels: Builder, Follow Pattern
-- Homepage & User: Observer Pattern, Infinite Scroll Pattern
-- Meetings: (add patterns Manali)
+- Subscription Management
+  - Command Pattern - In SubManagement > Controller > Modify Subs, the 'deleteSub' method stores 'currentSub' variable which is inputted by the user. When the user wants calls 'deleteSub', the function calls the previous stored state and delete the Subscription.
+  - Wizard Pattern - Guides the user in the subscription payment process. Here are the steps:
+    1. Click User profile
+    2. Click into Subscription Status
+    3. Modify Subscription
+    4. Choose Subscription Plan (free, premium)
+    5. Add Payment Method
+       6. Add First Name
+       7. Add Last Name
+       8. Choose Payment Type
+       9. Add Payment Informatoin
+       10. Save & Submit
+       11. "You have successfully subscribed for the Premium Subscription" Message!
+
+- Track Progress
+  - Observer Pattern
+  - Dashboard Pattern
+- Channels
+  - Builder 
+  - Follow Pattern
+- Homepage & User
+  - Observer Pattern
+  - Infinite Scroll Pattern
+- Meetings
+  - Factory Method
+  - Dealing with Data Pattern
 
 ---
 3/9 M02 - M03: System Component API Stubs and Automated System Tests

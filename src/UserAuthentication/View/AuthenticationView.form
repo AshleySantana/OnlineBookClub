@@ -5,8 +5,13 @@
     <constraints>
       <xy x="20" y="20" width="500" height="400"/>
     </constraints>
-    <properties/>
-    <border type="none"/>
+    <properties>
+      <background color="-5071429"/>
+      <foreground color="-4677445"/>
+    </properties>
+    <border type="none">
+      <title-color color="-5071429"/>
+    </border>
     <children>
       <component id="be074" class="javax.swing.JLabel" binding="LoginTitleLabel">
         <constraints>
