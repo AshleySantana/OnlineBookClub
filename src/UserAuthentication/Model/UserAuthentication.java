@@ -4,39 +4,36 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserAuthentication {
-    //Attributes
     private List<User> users = new ArrayList<>();
 
+    public UserAuthentication() {
+        // FAKE USERS
+        users.add(new User("admin", "admin@example.com", "1234"));
+        users.add(new User("user", "user@example.com", "pass"));
 
-    //METHODS
-    
-    /** register()
-     * Registers a new user with a username, email, and password
-     * @param username User's username
-     * @param email User's email
-     * @param password User's password
-     * @return the newly created User if successful, otherwaise null
-     */
-    public User register(String username, String email, String password){
+    }
+
+    public User login(String username, String password) {
+        for (User user : users) {
+            if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
+                return user;
+            }
+        }
         return null;
-    };
+    }
 
-    /** login()
-     * Logs in a user with a username and password
-     * @param username User's username
-     * @password password User's password
-     * @return the User if login is successful, otherwise null
-     */
-    public User login (String username, String pasword){
-        return null;
-    };
+    public User register(String username, String email, String password) {
+        for (User user : users) {
+            if (user.getUsername().equals(username)) {
+                return null;
+            }
+        }
+        User newUser = new User(username, email, password);
+        users.add(newUser);
+        return newUser;
+    }
 
-    /** logout()
-     * Logs out a user
-     * @param user
-     */
-    public void logout(User user){
-    };
-
-
+    public void logout(User user) {
+        // Placeholder logic
+    }
 }

@@ -2,34 +2,35 @@ package UserAuthentication.Controller;
 
 import UserAuthentication.Model.User;
 import UserAuthentication.Model.UserAuthentication;
+import UserAuthentication.View.AuthenticationView;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class AuthenticationController {
-    //Attributes
-    UserAuthentication auth;
+    private UserAuthentication auth;
+    private AuthenticationView view;
 
-    //METHODS
-    /** handleRegistration()
-     * handles user registration
-     * @param username User's username
-     * @param email User's email
-     * @param password User's password
-     */
-    public void handleRegistration(String username, String email, String password){
-    };
+    public AuthenticationController(UserAuthentication auth, AuthenticationView view) {
+        this.auth = auth;
+        this.view = view;
 
-    /** handleLogin()
-     * handles user login
-     * @param username User's username
-     * @param password User's password
-     */
-    public void handleLogin(String username, String password){
-    };
+        this.view.addLoginButtonListener(new LoginButtonListener());
+    }
 
-    /** handleLogout()
-     * handles user logout
-     * @param user
-     */
-    public void handleLogout(User user){
-    };
+    class LoginButtonListener implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            String username = view.getUsername();
+            String password = view.getPassword();
 
+            User user = auth.login(username, password);
+
+            if (user != null) {
+                view.showMessage("Login successful!");
+            } else {
+                view.showError("Invalid username or password.");
+            }
+        }
+    }
 }
