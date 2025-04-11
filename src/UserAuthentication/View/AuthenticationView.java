@@ -16,8 +16,8 @@ public class AuthenticationView extends JFrame {
     private JButton loginButton;
     private JPanel pnlRoot;
 
-    final int FRAME_WIDTH = 600;
-    final int FRAME_HEIGHT = 700;
+    final int FRAME_WIDTH = 400;
+    final int FRAME_HEIGHT = 500;
 
     private AuthenticationController authenticationController;
 
@@ -29,6 +29,7 @@ public class AuthenticationView extends JFrame {
     public void createComponents() {
         pnlRoot = new JPanel();
         pnlRoot.setLayout(new GridBagLayout()); // Better for forms
+        pnlRoot.setBackground(new Color(161, 218, 216));
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.insets = new Insets(5, 5, 5, 5); // Padding
         gbc.fill = GridBagConstraints.HORIZONTAL;
