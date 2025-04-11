@@ -14,4 +14,15 @@ public class UserProfileView {
     private JPasswordField passwordField1;
     private JTextField textField2;
     private JLabel statusLabel;
+
+    final int FRAME_WIDTH = 800;
+    final int FRAME_HEIGHT = 700;
+
+    public UserProfileView(){
+
+    }
+
+    public void createComponents(){
+
+    }
 }
