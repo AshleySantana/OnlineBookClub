@@ -28,18 +28,51 @@ public class AuthenticationView extends JFrame {
 
     public void createComponents() {
         pnlRoot = new JPanel();
+        pnlRoot.setLayout(new GridBagLayout()); // Better for forms
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.insets = new Insets(5, 5, 5, 5); // Padding
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+
+        // Initialize components (MUST DO THIS!)
+        LoginTitleLabel = new JLabel("LOGIN", SwingConstants.CENTER);
+        LoginTitleLabel.setFont(new Font("Arial", Font.BOLD, 24));
+
+        userNameLabel = new JLabel("Username:");
         userNameTextField = new JTextField(20);
+
+        passwordLabel = new JLabel("Password:");
         passwordTextField = new JPasswordField(20);
 
+        loginButton = new JButton("Login");
+        forgetPasswordButton = new JButton("Forgot Password?");
 
-        // Add components
-        pnlRoot.add(LoginTitleLabel);
-        pnlRoot.add(userNameLabel);
-        pnlRoot.add(userNameTextField);
-        pnlRoot.add(passwordLabel);
-        pnlRoot.add(passwordTextField);
-        pnlRoot.add(loginButton);
-        pnlRoot.add(forgetPasswordButton);
+        // Add components to panel with constraints
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        gbc.gridwidth = 2;
+        pnlRoot.add(LoginTitleLabel, gbc);
+
+        gbc.gridy++;
+        gbc.gridwidth = 1;
+        pnlRoot.add(userNameLabel, gbc);
+
+        gbc.gridx = 1;
+        pnlRoot.add(userNameTextField, gbc);
+
+        gbc.gridx = 0;
+        gbc.gridy++;
+        pnlRoot.add(passwordLabel, gbc);
+
+        gbc.gridx = 1;
+        pnlRoot.add(passwordTextField, gbc);
+
+        gbc.gridx = 0;
+        gbc.gridy++;
+        gbc.gridwidth = 2;
+        pnlRoot.add(loginButton, gbc);
+
+        gbc.gridy++;
+        pnlRoot.add(forgetPasswordButton, gbc);
 
         this.add(pnlRoot);
         this.setSize(FRAME_WIDTH, FRAME_HEIGHT);
@@ -47,7 +80,6 @@ public class AuthenticationView extends JFrame {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setVisible(true);
     }
-
     public void addLoginButtonListener(ActionListener listener) {
         loginButton.addActionListener(listener);
     }

@@ -13,13 +13,13 @@ public class UserAuthentication {
 
     }
 
-    public User login(String username, String password) {
+    public Boolean login(String username, String password) {
         for (User user : users) {
             if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
-                return user;
+                return true;
             }
         }
-        return null;
+        return false;
     }
 
     public User register(String username, String email, String password) {

@@ -24,9 +24,11 @@ public class AuthenticationController {
             String username = view.getUsername();
             String password = view.getPassword();
 
-            User user = auth.login(username, password);
+            //User user = auth.login(username, password);
 
-            if (user != null) {
+            if (auth.login(username, password)) {
+                System.out.println("Login succesfull!");
+
                 view.showMessage("Login successful!");
             } else {
                 view.showError("Invalid username or password.");
