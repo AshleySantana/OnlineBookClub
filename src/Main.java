@@ -14,5 +14,13 @@ public class Main {
 
 
         new TestHarness();
+
+        // to test login, you can use the 2 username & password combinations below:
+
+        // user: admin
+        // pass: 1234
+
+        // user: user
+        // pass: pass
     }
 }
