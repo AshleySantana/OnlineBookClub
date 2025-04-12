@@ -3,17 +3,17 @@ Design Patterns
 - Subscription Management
   - Command Pattern - In SubManagement > Controller > Modify Subs, the 'deleteSub' method stores 'currentSub' variable which is inputted by the user. When the user wants calls 'deleteSub', the function calls the previous stored state and delete the Subscription.
   - Wizard Pattern - Guides the user in the subscription payment process. Here are the steps:
-    1. Click User profile
-    2. Click into Subscription Status
-    3. Modify Subscription
-    4. Choose Subscription Plan (free, premium)
-    5. Add Payment Method
-       6. Add First Name
-       7. Add Last Name
-       8. Choose Payment Type
-       9. Add Payment Informatoin
-       10. Save & Submit
-       11. "You have successfully subscribed for the Premium Subscription" Message!
+    1. View user profile
+    2. Click “Change” button next to subscription status
+    3. Click “Change to Premium” button
+    4. Add payment method
+       - Add first name
+       - Add last name
+       - Add credit card info
+       - Add expiration date
+    5. Click “Save & Submit” button
+    6. Subscription changed and information saved message
+
 
 - Track Progress
   - Observer Pattern
