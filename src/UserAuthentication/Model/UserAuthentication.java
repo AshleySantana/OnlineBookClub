@@ -22,6 +22,8 @@ public class UserAuthentication {
         return false;
     }
 
+
+
     public User register(String username, String email, String password) {
         for (User user : users) {
             if (user.getUsername().equals(username)) {
@@ -36,4 +38,6 @@ public class UserAuthentication {
     public void logout(User user) {
         // Placeholder logic
     }
+
+
 }
