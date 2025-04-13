@@ -11,7 +11,7 @@ public class ChangeSubscriptionController {
     private JButton changeToPremiumButton;
 
     public ChangeSubscriptionController() {
-        subscriptionLabel = new JLabel("Subscription Status:");
+        subscriptionLabel = new JLabel("Subscription Status");
         currentStatusLabel = new JLabel("Current:");
         statusLabel = new JLabel("Free");
         changeToPremiumButton = new JButton("Change to Premium");

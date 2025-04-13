@@ -67,6 +67,7 @@ public class UserProfileController implements ActionListener {
                             // Show confirmation message after entering payment info
                             JOptionPane.showMessageDialog(paymentFrame, "Subscription changed to Premium!\nPayment information saved.\n"
                                     + "First Name: " + firstName + "\n"
+                                    + "Last Name: " + lastName + "\n"
                                     + "Credit Card: " + creditCardNumber + "\n"
                                     + "Expiration Date: " + expirationDate);
 

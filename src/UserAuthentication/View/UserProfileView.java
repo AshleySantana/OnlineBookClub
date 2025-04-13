@@ -34,6 +34,7 @@ public class UserProfileView extends JFrame{
 
     public UserProfileView(UserProfileController controller) {
         createComponents();
+        addChangeButtonListener(controller);
     }
 
     public void displayData(User user){
