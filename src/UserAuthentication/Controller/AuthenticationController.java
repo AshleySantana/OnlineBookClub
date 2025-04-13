@@ -74,7 +74,6 @@ public class AuthenticationController {
     public void ShowUserProfile(User user){
         view.dispose();
         userProfileController = new UserProfileController(user);
-
     }
     public void showLoginScreen(){
         registerView.setVisible(false);
