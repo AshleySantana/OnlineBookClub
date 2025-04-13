@@ -20,9 +20,8 @@ public class Main {
         // user: user
         // pass: pass
         UserAuthentication model = new UserAuthentication();
-        AuthenticationView view = new AuthenticationView(null);
-        AuthenticationController controller = new AuthenticationController(model, view);
-        view.setAuthenticationController(controller);
+        AuthenticationController controller = new AuthenticationController(model);
+
 
 //        User model2 = new User();
 //        UserProfileView view2 = new UserProfileView();
@@ -30,14 +29,14 @@ public class Main {
 
         new TestHarness();
 
-        SwingUtilities.invokeLater(() -> {
-            User testUser = new User("admin", "jm", "1234");
-            UserProfileView profileView = new UserProfileView();
-            UserProfileController controller2 = new UserProfileController(testUser, profileView);
-
-            profileView.addChangeButtonListener(controller2.new ChangeButtonListener());
-
-        });
+//        SwingUtilities.invokeLater(() -> {
+//            User testUser = new User("admin", "jm", "1234");
+//            UserProfileView profileView = new UserProfileView();
+//            UserProfileController controller2 = new UserProfileController(testUser, profileView);
+//
+//            profileView.addChangeButtonListener(controller2.new ChangeButtonListener());
+//
+//        });
 
 
 
