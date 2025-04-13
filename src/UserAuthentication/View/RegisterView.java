@@ -6,26 +6,27 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
 
-public class AuthenticationView extends JFrame {
-    private JLabel LoginTitleLabel;
+public class RegisterView extends JFrame{
+    private JLabel RegisterTitleLabel;
     private JLabel userNameLabel;
     private JTextField userNameTextField;
     private JLabel passwordLabel;
     private JPasswordField passwordTextField;
-    private JButton forgetPasswordButton;
+    private JLabel emailLabel;
+    private JPasswordField emailTextField;
+    private JButton registerfakeButton;
     private JButton registerButton;
     public JButton getRegisterButton(){
         return this.registerButton;
     }
-    private JButton loginButton;
     private JPanel pnlRoot;
 
     final int FRAME_WIDTH = 400;
     final int FRAME_HEIGHT = 500;
 
-    private AuthenticationController authenticationController;
+    private AuthenticationController.RegisterButtonListener authenticationController;
 
-    public AuthenticationView(AuthenticationController authenticationController) {
+    public RegisterView(AuthenticationController.RegisterButtonListener authenticationController) {
         this.authenticationController = authenticationController;
         createComponents();
     }
@@ -39,8 +40,8 @@ public class AuthenticationView extends JFrame {
         gbc.fill = GridBagConstraints.HORIZONTAL;
 
         // Initialize components (MUST DO THIS!)
-        LoginTitleLabel = new JLabel("LOGIN", SwingConstants.CENTER);
-        LoginTitleLabel.setFont(new Font("Arial", Font.BOLD, 24));
+        RegisterTitleLabel = new JLabel("REGISTER", SwingConstants.CENTER);
+        RegisterTitleLabel.setFont(new Font("Arial", Font.BOLD, 24));
 
         userNameLabel = new JLabel("Username:");
         userNameTextField = new JTextField(20);
@@ -48,15 +49,17 @@ public class AuthenticationView extends JFrame {
         passwordLabel = new JLabel("Password:");
         passwordTextField = new JPasswordField(20);
 
-        loginButton = new JButton("Login");
-        forgetPasswordButton = new JButton("Forgot Password?");
-        registerButton = new JButton("Register/Create Account");
+        emailLabel = new JLabel("Email:");
+        emailTextField = new JPasswordField(30);
+
+        registerButton = new JButton("Register");
+
 
         // Add components to panel with constraints
         gbc.gridx = 0;
         gbc.gridy = 0;
         gbc.gridwidth = 2;
-        pnlRoot.add(LoginTitleLabel, gbc);
+        pnlRoot.add(RegisterTitleLabel, gbc);
 
         gbc.gridy++;
         gbc.gridwidth = 1;
@@ -74,23 +77,22 @@ public class AuthenticationView extends JFrame {
 
         gbc.gridx = 0;
         gbc.gridy++;
+        pnlRoot.add(emailLabel, gbc);
+
+        gbc.gridx = 1;
+        pnlRoot.add(emailTextField, gbc);
+
+        gbc.gridx = 0;
+        gbc.gridy++;
         gbc.gridwidth = 2;
-        pnlRoot.add(loginButton, gbc);
-
-        gbc.gridy++;
-        pnlRoot.add(forgetPasswordButton, gbc);
-
-        gbc.gridy++;
         pnlRoot.add(registerButton, gbc);
+
 
         this.add(pnlRoot);
         this.setSize(FRAME_WIDTH, FRAME_HEIGHT);
         this.setTitle("User Authentication");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setVisible(true);
-    }
-    public void addLoginButtonListener(ActionListener listener) {
-        loginButton.addActionListener(listener);
     }
     public void addRegisterButtonListener(ActionListener listener){
         registerButton.addActionListener(listener);
@@ -102,7 +104,9 @@ public class AuthenticationView extends JFrame {
     public String getPassword() {
         return new String(passwordTextField.getPassword());
     }
-
+    public String getEmail() {
+        return emailTextField.getText();
+    }
     public void showMessage(String message) {
         JOptionPane.showMessageDialog(this, message, "Info", JOptionPane.INFORMATION_MESSAGE);
     }
@@ -111,8 +115,4 @@ public class AuthenticationView extends JFrame {
         JOptionPane.showMessageDialog(this, message, "Error", JOptionPane.ERROR_MESSAGE);
     }
 
-    // For setting controller
-    public void setAuthenticationController(AuthenticationController controller) {
-        this.authenticationController = controller;
-    }
 }
