@@ -1,3 +1,5 @@
+import Channels.Controller.ChannelController;
+import Channels.Model.Channel;
 import TestHarness.TestHarness;
 import UserAuthentication.Controller.AuthenticationController;
 import UserAuthentication.Controller.UserProfileController;
@@ -21,8 +23,9 @@ public class Main {
         // pass: pass
         UserAuthentication model = new UserAuthentication();
         AuthenticationController controller = new AuthenticationController(model);
-
-
+        Channel channel = new Channel("Polstergeese");
+        User user = new User("admin", "werna@com", "1234");
+        ChannelController channelController = new ChannelController(channel, user);
 //        User model2 = new User();
 //        UserProfileView view2 = new UserProfileView();
 //        UserProfileController profileController = new UserProfileController(model2, view2);

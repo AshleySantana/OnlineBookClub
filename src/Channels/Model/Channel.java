@@ -6,7 +6,8 @@ import java.awt.*;
 import java.util.ArrayList;
 
 public class Channel {
-    ArrayList<Comment> channelComments = new ArrayList<>();
+    private ArrayList<Comment> channelComments = new ArrayList<>();
+    private ArrayList<ChannelObserver> observers = new ArrayList<>();
     /**
      * The name of the channel.
      */
@@ -18,6 +19,19 @@ public class Channel {
     private Image BookImage;
 
     Book book;
+    public void addObserver(ChannelObserver observer) {
+        observers.add(observer);
+    }
+
+    public void removeObserver(ChannelObserver observer) {
+        observers.remove(observer);
+    }
+
+    private void notifyObservers(Comment comment) {
+        for (ChannelObserver observer : observers) {
+            observer.onCommentAdded(comment);
+        }
+    }
     /**
      * Gets the Book name.
      *
@@ -95,6 +109,7 @@ public class Channel {
 
     public void addComment(Comment comment){
         channelComments.add(comment);
+        notifyObservers(comment);
     }
 
     public void showAllCommentsInChannel(){
@@ -102,5 +117,7 @@ public class Channel {
            comment.showComment();
         }
     }
-
+    public ArrayList<Comment> getChannelComments() {
+        return channelComments;
+    }
 }
