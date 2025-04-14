@@ -3,7 +3,7 @@ package MeetingBookClub.Model;
 import java.sql.Time;
 import java.util.Date;
 
-public class Meeting {
+public class Meeting implements MeetingInterface {
 
     /**
      * Following variables are used in the meeting feature
@@ -74,5 +74,10 @@ public class Meeting {
     /**
      * CRUD operations
      */
+
+    @Override
+    public String getMeeting (){
+        return meetingName + meetingDate;
+    }
 
 }

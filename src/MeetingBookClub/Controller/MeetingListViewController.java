@@ -1,7 +1,9 @@
 package MeetingBookClub.Controller;
 
+
 import MeetingBookClub.Model.Meeting;
 import MeetingBookClub.Model.MeetingsList;
+import MeetingBookClub.View.MeetingListView;
 
 public class MeetingListViewController {
 
@@ -10,17 +12,13 @@ public class MeetingListViewController {
      * Meeting variables to control
      */
 
-    public Meeting meeting;
-    public MeetingsList meetingsList;
+    private final MeetingsList model;
+    private final MeetingListView view;
 
-    /**
-     * Constructor
-     * @param meeting
-     * @param meetingsList
-     */
-    public MeetingListViewController(Meeting meeting, MeetingsList meetingsList) {
-        this.meeting = meeting;
-        this.meetingsList = meetingsList;
+
+    public MeetingListViewController(MeetingsList model, MeetingListView view) {
+       this.model=model;
+       this.view=view;
     }
 
 
@@ -29,6 +27,8 @@ public class MeetingListViewController {
      * @return
      */
 
+
+    /*
     public Meeting getMeeting() {
         return meeting;
     }
@@ -45,6 +45,8 @@ public class MeetingListViewController {
         this.meetingsList = meetingsList;
     }
 
+
+     */
 
 
 

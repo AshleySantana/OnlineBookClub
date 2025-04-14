@@ -2,12 +2,12 @@ package MeetingBookClub.Model;
 
 import java.util.List;
 
-public class MeetingsList {
+public class MeetingsList  {
 
     /**
      * List of meetings
      */
-    public List meetingList;
+    private List<MeetingInterface> meetingList;
 
 
     /**
@@ -17,6 +17,11 @@ public class MeetingsList {
 
     public MeetingsList(List meetingList) {
         this.meetingList = meetingList;
+    }
+
+
+    public void addToList (MeetingInterface meeting){
+        meetingList.add(meeting);
     }
 
 
