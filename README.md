@@ -1,11 +1,12 @@
 # OnlineBookClub
 Design Patterns
 
-| Team-Member ID | Team-Member Name     | Design Pattern Implemented | Classes / Interfaces implementing the Design Pattern             |
-|----------------|----------------------|----------------------------|------------------------------------------------------------------|
-| 001            | Stephanie Goodie Obi | **Observer Pattern**       | `Channel`, `ChannelObserver`, `ChannelView`, `ChannelController` |
-| 001            | Stephanie Goodie Obi | **Infinte Scroll Pattern** | `ChannelView`                                                    |
-| mjs8580        | Manali Sanyal        | **Factory Pattern**        | `Meeting, MeetingsList,                                          |
+| Team-Member ID | Team-Member Name     | Design Pattern Implemented | Classes / Interfaces implementing the Design Pattern                   |
+|----------------|----------------------|----------------------------|------------------------------------------------------------------------|
+| 001            | Stephanie Goodie Obi | **Observer Pattern**       | `Channel`, `ChannelObserver`, `ChannelView`, `ChannelController`       |
+| 001            | Stephanie Goodie Obi | **Infinte Scroll Pattern** | `ChannelView`                                                          |
+| mjs8580        | Manali Sanyal        | **Factory Pattern**        | `Meeting, MeetingsList,                                                |
+| snw5334        | Sereina Williams     | **Observer Pattern**       | `ReadingProgress` , `LibraryView`, `AddBookForm` , `LibraryController` |
 
 - Subscription Management
   - Command Pattern - In SubManagement > Controller > Modify Subs, the 'deleteSub' method stores 'currentSub' variable which is inputted by the user. When the user wants calls 'deleteSub', the function calls the previous stored state and delete the Subscription.
