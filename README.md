@@ -1,5 +1,11 @@
 # OnlineBookClub
 Design Patterns
+
+| Team-Member ID | Team-Member Name     | Design Pattern Implemented | Classes / Interfaces implementing the Design Pattern                          |
+|----------------|----------------------|-----------------------------|--------------------------------------------------------------------------------|
+| 001            | Stephanie Goodie Obi | **Observer Pattern**        | `Channel`, `ChannelObserver`, `ChannelView`, `ChannelController`                                   |
+| 001            | Stephanie Goodie Obi | **Infinte Scroll Pattern**        | `ChannelView`                                   |
+
 - Subscription Management
   - Command Pattern - In SubManagement > Controller > Modify Subs, the 'deleteSub' method stores 'currentSub' variable which is inputted by the user. When the user wants calls 'deleteSub', the function calls the previous stored state and delete the Subscription.
   - Wizard Pattern - Guides the user in the subscription payment process. Here are the steps:
@@ -19,8 +25,28 @@ Design Patterns
   - Observer Pattern
   - Dashboard Pattern
 - Channels
-  - Builder 
-  - Follow Pattern
+  - Observer Pattern
+- **Implemented in**: `Channel` (Model) and `ChannelView` (View) components  
+- **Behavior**:  
+  1. User enters comment text and clicks "Send" button  
+  2. `ChannelController` creates new `Comment` object  
+  3. `Channel` model adds comment to its collection  
+  4. `Channel` notifies all registered observers (`ChannelView` instances)  
+  5. Each `ChannelView` updates its UI to display the new comment  
+  6. Scroll position automatically adjusts to show latest message  
+
+  - Infinite-Scroll Pattern
+    - **Implemented in**: `ChannelView` using `JScrollPane`  
+- **User workflow**:  
+  1. User opens channel view  
+  2. Initial batch of recent comments loads  
+  3. As user scrolls up:  
+     - Scroll position is monitored  
+     - When nearing top, older comments are fetched  
+     - New comments are dynamically added to the top  
+  4. Smooth scrolling maintained throughout  
+  5. Loading indicators shown during data fetch  
+  6. Scroll position preserved when new content loads 
 - Homepage & User
   - Observer Pattern
   - Infinite Scroll Pattern
