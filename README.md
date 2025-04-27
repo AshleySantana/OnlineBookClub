@@ -5,7 +5,8 @@ Design Patterns
 |----------------|----------------------|----------------------------|------------------------------------------------------------------|
 | 001            | Stephanie Goodie Obi | **Observer Pattern**       | `Channel`, `ChannelObserver`, `ChannelView`, `ChannelController` |
 | 001            | Stephanie Goodie Obi | **Infinte Scroll Pattern** | `ChannelView`                                                    |
-| mjs8580        | Manali Sanyal        | **Factory Pattern**        | `Meeting, MeetingsList,                                          |
+| mjs8580        | Manali Sanyal        | **Factory Pattern**        | `Meeting, MeetingsList,MeetingsListView,MakeMeetings`    <br/>         |
+| snw5334        | Serina Williams      | **Rudimen                  |                                                                        |
 
 - Subscription Management
   - Command Pattern - In SubManagement > Controller > Modify Subs, the 'deleteSub' method stores 'currentSub' variable which is inputted by the user. When the user wants calls 'deleteSub', the function calls the previous stored state and delete the Subscription.
