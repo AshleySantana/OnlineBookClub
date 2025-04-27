@@ -8,6 +8,7 @@ public class Book {
     String title;
     String author;
     Boolean isRead;
+    int numPages;
     double bookProgress;
 
 
@@ -27,9 +28,10 @@ public class Book {
         this.bookProgress = bookProgress;
     }
 
-    public Book(String title, String author) {
+    public Book(String title, String author, int numPages) {
         this.title = title;
         this.author = author;
+        this.numPages = numPages;
     }
 
 
@@ -49,6 +51,9 @@ public class Book {
     public double getBookProgress() {
         return bookProgress;
     }
+    public int getNumPages() {
+        return numPages;
+    }
 
     public void setBookImage(Image bookImage) {
         this.bookImage = bookImage;
@@ -65,8 +70,14 @@ public class Book {
     public void setBookProgress(double bookProgress) {
         this.bookProgress = bookProgress;
     }
+    public void setNumPages(int numPages) {
+        this.numPages = numPages;
+    }
 
     public void displayBookInfo() {
         System.out.println("Title: " + title + ", Author: " + author + ", Read: " + isRead + ", Progress: " + bookProgress + "%");
     }
+
+
+
 }

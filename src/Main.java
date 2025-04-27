@@ -1,6 +1,11 @@
+import Homepage.Model.Book;
 import Channels.Controller.ChannelController;
 import Channels.Model.Channel;
 import TestHarness.TestHarness;
+import TrackProgress.Controller.LibraryController;
+import TrackProgress.Model.ReadingProgress;
+import TrackProgress.View.AddBookForm;
+import TrackProgress.View.LibraryView;
 import UserAuthentication.Controller.AuthenticationController;
 import UserAuthentication.Controller.UserProfileController;
 import UserAuthentication.Model.User;
@@ -16,11 +21,11 @@ public class Main {
         // Authenticating User
         // to test login, you can use the 2 username & password combinations below:
 
-        // user: admin
-        // pass: 1234
+                    // user: admin
+                    // pass: 1234
 
-        // user: user
-        // pass: pass
+                    // user: user
+                    // pass: pass
         UserAuthentication model = new UserAuthentication();
         AuthenticationController controller = new AuthenticationController(model);
         Channel channel = new Channel("Polstergeese");
@@ -40,6 +45,13 @@ public class Main {
 //            profileView.addChangeButtonListener(controller2.new ChangeButtonListener());
 //
 //        });
+
+
+        ReadingProgress readingProgressModel = new ReadingProgress(1000);
+        LibraryView libraryView = new LibraryView();
+        AddBookForm addBookForm = new AddBookForm();
+        LibraryController libraryController = new LibraryController(readingProgressModel, libraryView, addBookForm);
+
 
 
 

@@ -1,5 +1,6 @@
 package UserAuthentication.Controller;
 
+import Homepage.Model.Book;
 import UserAuthentication.Model.User;
 import UserAuthentication.Model.UserAuthentication;
 import UserAuthentication.View.AuthenticationView;
@@ -25,6 +26,9 @@ public class AuthenticationController {
         this.view.addLoginButtonListener(new LoginButtonListener());
         this.view.addRegisterButtonListener(new RegisterButtonListener());
         this.registerView.addRegisterButtonListener(new RegisterButtonListener());
+    }
+
+    public void markBookAsRead(Book book1) {
     }
 
     class LoginButtonListener implements ActionListener {
