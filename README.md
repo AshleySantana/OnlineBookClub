@@ -1,6 +1,6 @@
 # OnlineBookClub
 Refactoring Implementations
-1. Britney Wang
+1. Britney Wang (UserProfileController)
    - Original Issue:
      - The actionPerformed() method was bloated and tightly coupled.
      - Logic for UI and business operations was tangled together.
