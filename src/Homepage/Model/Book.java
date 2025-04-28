@@ -32,6 +32,7 @@ public class Book {
         this.title = title;
         this.author = author;
         this.numPages = numPages;
+        this.bookImage = null;
     }
 
 

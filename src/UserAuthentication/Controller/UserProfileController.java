@@ -1,5 +1,6 @@
 package UserAuthentication.Controller;
 
+import Channels.Controller.ChannelListController;
 import UserAuthentication.Model.User;
 import UserAuthentication.View.UserProfileView;
 
@@ -19,9 +20,19 @@ public class UserProfileController implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        JButton source = (JButton) e.getSource();
+        if (source.equals(view.getChangeBtn())) {
         openChangeSubscriptionWindow();
+        }
+        if(source.equals(view.getChannels())){
+            openChannelList();
+        }
     }
 
+    private void openChannelList(){
+        ChannelListController channelListController = new ChannelListController(user);
+
+    }
     private void openChangeSubscriptionWindow() {
         SwingUtilities.invokeLater(() -> {
             ChangeSubscriptionController changeSub = new ChangeSubscriptionController();

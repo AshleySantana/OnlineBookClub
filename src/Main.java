@@ -29,7 +29,14 @@ public class Main {
         UserAuthentication model = new UserAuthentication();
         AuthenticationController controller = new AuthenticationController(model);
         Channel channel = new Channel("Polstergeese");
+        Channel channel2 = new Channel("Polstergeese 1");
+        Channel channel3 = new Channel("Polstergeese 2");
+        Channel channel4  = new Channel("Polstergeese 3");
         User user = new User("admin", "werna@com", "1234");
+        user.subscribeToChannel(channel);
+        user.subscribeToChannel(channel2);
+        user.subscribeToChannel(channel3);
+        user.subscribeToChannel(channel4);
         ChannelController channelController = new ChannelController(channel, user);
 
         new TestHarness();

@@ -44,11 +44,6 @@ public class ChannelController implements ActionListener {
                     channelView.getInputArea().setText("");
                 }
             }
-
-//            // Load existing comments
-//            for (Comment c : channel.getChannelComments()) {
-//                channelView.addCommentToView(c);
-//            }
         }
 
         private void showComments(){

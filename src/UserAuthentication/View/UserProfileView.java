@@ -27,6 +27,10 @@ public class UserProfileView extends JFrame{
     private JLabel username;
     private JLabel password;
     private JLabel email;
+    private JButton channels;
+    public JButton getChannels(){
+        return channels;
+    }
 
 
     final int FRAME_WIDTH = 500;
@@ -35,6 +39,7 @@ public class UserProfileView extends JFrame{
     public UserProfileView(UserProfileController controller) {
         createComponents();
         addChangeButtonListener(controller);
+        addChannelButtonListener(controller);
     }
 
     public void displayData(User user){
@@ -83,5 +88,9 @@ public class UserProfileView extends JFrame{
 
     public void addChangeButtonListener(ActionListener listener) {
         changeButton.addActionListener(listener);
+    }
+
+    public void addChannelButtonListener(ActionListener listener){
+        channels.addActionListener(listener);
     }
 }

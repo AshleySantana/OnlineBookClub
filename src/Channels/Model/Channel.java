@@ -1,6 +1,7 @@
 package Channels.Model;
 
 import Homepage.Model.Book;
+import UserAuthentication.Model.User;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -8,6 +9,17 @@ import java.util.ArrayList;
 public class Channel {
     private ArrayList<Comment> channelComments = new ArrayList<>();
     private ArrayList<ChannelObserver> observers = new ArrayList<>();
+
+    public ArrayList<User> getMembers() {
+        return members;
+    }
+
+    private ArrayList<User> members = new ArrayList<>();
+
+    public boolean addMember(User user){
+        this.members.add(user);
+        return true;
+    }
     /**
      * The name of the channel.
      */
