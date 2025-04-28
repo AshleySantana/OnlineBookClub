@@ -1,6 +1,9 @@
 import Homepage.Model.Book;
 import Channels.Controller.ChannelController;
 import Channels.Model.Channel;
+import MeetingBookClub.Controller.MeetingListViewController;
+import MeetingBookClub.Model.MeetingsList;
+import MeetingBookClub.View.MeetingListView;
 import TestHarness.TestHarness;
 import TrackProgress.Controller.LibraryController;
 import TrackProgress.Model.ReadingProgress;
@@ -26,6 +29,7 @@ public class Main {
 
                     // user: user
                     // pass: pass
+
         UserAuthentication model = new UserAuthentication();
         AuthenticationController controller = new AuthenticationController(model);
         Channel channel = new Channel("Polstergeese");
@@ -54,6 +58,17 @@ public class Main {
 
 
 
+
+        //Meeting
+
+        MeetingsList meetingsList = new MeetingsList();
+        MeetingListView meetingListView = new MeetingListView();
+        MeetingListViewController controllerMeeting = new MeetingListViewController(meetingsList, meetingListView);
+        JFrame frame = new JFrame("Meeting Manager");
+        frame.setContentPane(meetingListView.getJPanell()); // Main panel from your view
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
 
 
     }

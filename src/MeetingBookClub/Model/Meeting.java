@@ -33,7 +33,7 @@ public class Meeting implements MeetingInterface {
      * Getters
      * @return
      */
-
+    @Override
     public Date getMeetingDate() {
         return meetingDate;
     }
@@ -41,7 +41,7 @@ public class Meeting implements MeetingInterface {
     public void setMeetingDate(Date meetingDate) {
         this.meetingDate = meetingDate;
     }
-
+    @Override
     public Time getMeetingTime() {
         return meetingTime;
     }
@@ -54,7 +54,7 @@ public class Meeting implements MeetingInterface {
     public void setMeetingTime(Time meetingTime) {
         this.meetingTime = meetingTime;
     }
-
+    @Override
     public String getMeetingName() {
         return meetingName;
     }
@@ -62,7 +62,7 @@ public class Meeting implements MeetingInterface {
     public void setMeetingName(String meetingName) {
         this.meetingName = meetingName;
     }
-
+    @Override
     public String getMeetingLink() {
         return meetingLink;
     }
@@ -78,6 +78,10 @@ public class Meeting implements MeetingInterface {
     @Override
     public String getMeeting (){
         return meetingName + meetingDate;
+    }
+
+    public String toString() {
+        return "MEETING: "+ meetingName + "at" + meetingTime + "on" + meetingDate + "link: " + meetingLink;
     }
 
 }

@@ -5,7 +5,13 @@ import MeetingBookClub.Model.Meeting;
 import MeetingBookClub.Model.MeetingsList;
 import MeetingBookClub.View.MeetingListView;
 
-public class MeetingListViewController {
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.sql.Time;
+import java.util.Date;
+
+public class MeetingListViewController implements ActionListener {
 
 
     /**
@@ -19,34 +25,50 @@ public class MeetingListViewController {
     public MeetingListViewController(MeetingsList model, MeetingListView view) {
        this.model=model;
        this.view=view;
+
+      addActionListeners();
+
     }
 
 
-    /**
-     * getters and setters
-     * @return
-     */
 
+    //connecting add button to meeting
 
-    /*
-    public Meeting getMeeting() {
-        return meeting;
+    private void addActionListeners(){
+        view.getAddToList().addActionListener(this);
+
     }
 
-    public void setMeeting(Meeting meeting) {
-        this.meeting = meeting;
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        Object source = e.getSource();
+
+        if (source == view.getAddToList()){
+            addNewMeeting();
+        }
     }
 
-    public MeetingsList getMeetingsList() {
-        return meetingsList;
+    private void addNewMeeting() {
+        Date today = new Date();
+        Time now = new Time(System.currentTimeMillis());
+        String name = JOptionPane.showInputDialog(view.getJPanell(), "Enter Meeting Name:");
+        if (name == null || name.isEmpty()) {
+            return;
+        }
+
+        String link = JOptionPane.showInputDialog(view.getJPanell(), "Enter Meeting Link:");
+        if (link == null || link.isEmpty()) {
+            return;
+        }
+
+
+        Meeting newMeeting = new Meeting(today, now, name, link);
+        model.addMeetingtoList(newMeeting);
+
     }
 
-    public void setMeetingsList(MeetingsList meetingsList) {
-        this.meetingsList = meetingsList;
-    }
 
 
-     */
 
 
 
