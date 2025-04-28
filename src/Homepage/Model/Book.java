@@ -59,7 +59,7 @@ public class Book {
         this.bookImage = bookImage;
     }
     public void setTitle(String name) {
-        this.title = title;
+        this.title = name;
     }
     public void setAuthor(String author) {
         this.author = author;

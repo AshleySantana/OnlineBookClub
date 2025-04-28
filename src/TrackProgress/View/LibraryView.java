@@ -13,6 +13,12 @@ public class LibraryView {
     private JTextArea wantToReadTextArea;
     private JLabel readingWishListLabel;
     private JLabel libraryTitleLabel;
+    private JButton updateBookButton;
+    private JButton deleteBookButton;
+
+    private JList<String> readingList;
+    private JLabel bookProgressLabel;
+    private DefaultListModel<String> readingListModel;
 
     public JPanel getPanel() {
         return libraryPnlRoot;
@@ -20,6 +26,14 @@ public class LibraryView {
 
     public JButton getAddABookButton() {
         return addABookButton;
+    }
+
+    public JButton getUpdateBookButton() {
+        return updateBookButton;
+    }
+
+    public JButton getDeleteBookButton() {
+        return deleteBookButton;
     }
 
     public JTextArea getWantToReadTextArea() {
@@ -46,6 +60,18 @@ public class LibraryView {
         bookInfoListTextArea.setText(text);
     }
 
+    public JList<String> getReadingList() {
+        return readingList;
+    }
+
+    public JLabel getBookProgressLabel() {
+        return bookProgressLabel;
+    }
+
+    public DefaultListModel<String> getReadingListModel() {
+        return readingListModel;
+    }
+
     private void createUIComponents() {
         libraryPnlRoot = new JPanel();
         libraryPnlRoot.setLayout(new BorderLayout());
@@ -53,25 +79,35 @@ public class LibraryView {
         // Top Section
         JPanel topPanel = new JPanel(new FlowLayout());
         addABookButton = new JButton("Add a Book?");
+        updateBookButton = new JButton("Update Book");
+        deleteBookButton = new JButton("Delete Book");
         numofBookTextField = new JTextField(5);
+
         topPanel.add(addABookButton);
+        topPanel.add(updateBookButton);
+        topPanel.add(deleteBookButton);
         topPanel.add(new JLabel("Books to Read:"));
         topPanel.add(numofBookTextField);
 
         // Center Section
-        wantToReadTextArea = new JTextArea(10, 25);
-        bookInfoListTextArea = new JTextArea(10, 25);
+        readingListModel = new DefaultListModel<>();
+        readingList = new JList<>(readingListModel);
+        JScrollPane readingListScrollPane = new JScrollPane(readingList);
 
-        // Add scroll panes for better UX
-        JScrollPane wantScroll = new JScrollPane(wantToReadTextArea);
+        bookInfoListTextArea = new JTextArea(10, 25);
         JScrollPane readScroll = new JScrollPane(bookInfoListTextArea);
 
         JPanel centerPanel = new JPanel(new GridLayout(1, 2));
-        centerPanel.add(wantScroll);
+        centerPanel.add(readingListScrollPane);
         centerPanel.add(readScroll);
 
-        // Final layout
+        //Bottom Label
+        bookProgressLabel = new JLabel("Select a book to see progress!");
+        JPanel bottomPanel = new JPanel(new FlowLayout());
+        bottomPanel.add(bookProgressLabel);
+
         libraryPnlRoot.add(topPanel, BorderLayout.NORTH);
         libraryPnlRoot.add(centerPanel, BorderLayout.CENTER);
+        libraryPnlRoot.add(bottomPanel, BorderLayout.SOUTH);
     }
 }

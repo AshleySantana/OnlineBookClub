@@ -31,9 +31,6 @@ public class Main {
         Channel channel = new Channel("Polstergeese");
         User user = new User("admin", "werna@com", "1234");
         ChannelController channelController = new ChannelController(channel, user);
-//        User model2 = new User();
-//        UserProfileView view2 = new UserProfileView();
-//        UserProfileController profileController = new UserProfileController(model2, view2);
 
         new TestHarness();
 
@@ -47,12 +44,10 @@ public class Main {
 //        });
 
 
-        ReadingProgress readingProgressModel = new ReadingProgress(1000);
+        ReadingProgress readingProgressModel = new ReadingProgress();
         LibraryView libraryView = new LibraryView();
         AddBookForm addBookForm = new AddBookForm();
         LibraryController libraryController = new LibraryController(readingProgressModel, libraryView, addBookForm);
-
-
 
 
 
