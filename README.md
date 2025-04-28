@@ -20,15 +20,18 @@ Refactoring Implementations
     - Solution:
         - Used SwingUtilities.involeLater() for proper UI threading
         - Implemented validation handling from the user, making sure that it doesn't allow blank inputs
+4. Manali Sanyal
+   - Original Issue:
+   - Solution:
 
 
 
-| Team-Member ID | Team-Member Name     | Percentage efforts     |brief of tasks                  |
-|----------------|----------------------|--------------------------------|------------------------------------------------------------------------|
-| 001            | Stephanie Goodie Obi | **Observer Pattern**           | Added and configured channel list implentastion in the project file. Users can now see what channels they are a part of, remove themselves and invit other users.       |
-| mjs8580        | Manali Sanyal        |            |                                                 |
-| snw5334        | Sereina Williams     |  **Observer Pattern**       | |  Added the rest of the CRUD operations to the library. Users can add a book, update the book details, and delete a book from the library. I also did the track progress aspect. The user can click a book in the library and update which page they are at in the book. It will then show the percentage of book completion.
-| bqw5394        | Britney Wang         |  |                                                  |   
+| Team-Member ID | Team-Member Name     | Percentage efforts           | brief of tasks                                                                                                                                                                                                                                                                                                              |
+|----------------|----------------------|------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 001            | Stephanie Goodie Obi | **Observer Pattern**         | Added and configured channel list implentastion in the project file. Users can now see what channels they are a part of, remove themselves and invit other users.                                                                                                                                                           |
+| mjs8580        | Manali Sanyal        |                              |                                                                                                                                                                                                                                                                                                                             |
+| snw5334        | Sereina Williams     | **Observer Pattern**         | Added the rest of the CRUD operations in the library. Users can add a book, update the book details, and delete a book from the library. I also did the track progress aspect. The user can click a book in the library and update which page they are at in the book. It will then show the percentage of book completion. |  
+| bqw5394        | Britney Wang         |                              |                                                                                                                                                                                                                                                                                                                             |   
 
 
 Design Patterns
