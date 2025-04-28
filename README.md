@@ -8,6 +8,21 @@ Refactoring Implementations
      - Extracted logic from actionPerformed() into two helper methods: openChangeSubscriptionWindow() and openAddPaymentWindow()
      - Used SwingUtilities.invokeLater() for proper UI threading
         in both helper methods.
+2. Stephanie Goodie-Obi (UserProfileController)
+   - Original Issue:
+     - There was a lot of unused overloaded comments that were bloating and not doing anything
+   - Solution
+     -Cleaned up code files that had the issue.
+
+
+
+| Team-Member ID | Team-Member Name     | Percentage efforts     |brief of tasks                  |
+|----------------|----------------------|--------------------------------|------------------------------------------------------------------------|
+| 001            | Stephanie Goodie Obi | **Observer Pattern**           | Added and configured channel list implentastion in the project file. Users can now see what channels they are a part of, remove themselves and invit other users.       |
+| mjs8580        | Manali Sanyal        |            |                                                 |
+| snw5334        | Sereina Williams     |        | |   
+| bqw5394        | Britney Wang         |  |                                                  |   
+
 
 Design Patterns
 
