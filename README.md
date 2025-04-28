@@ -21,8 +21,10 @@ Refactoring Implementations
         - Used SwingUtilities.involeLater() for proper UI threading
         - Implemented validation handling from the user, making sure that it doesn't allow blank inputs
 4. Manali Sanyal
-   - Original Issue:
-   - Solution:
+   - Original Issue: Issues with Meeting MVC - controller not implemented 
+   - Solution: Implemented controller and confrimed button functionality 
+   - Made sure GUI was functional 
+   - added logic in Meeting, MeetingsList 
 
 
 
