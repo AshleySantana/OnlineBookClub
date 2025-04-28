@@ -107,7 +107,7 @@ public class TestHarness {
         System.out.println("Books Read: " + goal.getBooksRead());
 
         // Testing ReadingProgress class
-        ReadingProgress progress = new ReadingProgress(300);
+        ReadingProgress progress = new ReadingProgress();
         progress.updateProgress(50);
         System.out.println("Progress: " + progress.getProgressPercentage() + "%");
 

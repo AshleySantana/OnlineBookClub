@@ -32,6 +32,7 @@ public class Book {
         this.title = title;
         this.author = author;
         this.numPages = numPages;
+        this.bookImage = null;
     }
 
 
@@ -59,7 +60,7 @@ public class Book {
         this.bookImage = bookImage;
     }
     public void setTitle(String name) {
-        this.title = title;
+        this.title = name;
     }
     public void setAuthor(String author) {
         this.author = author;

@@ -13,7 +13,7 @@ public class RegisterView extends JFrame{
     private JLabel passwordLabel;
     private JPasswordField passwordTextField;
     private JLabel emailLabel;
-    private JPasswordField emailTextField;
+    private JTextField emailTextField;
     private JButton registerfakeButton;
     private JButton registerButton;
     public JButton getRegisterButton(){
