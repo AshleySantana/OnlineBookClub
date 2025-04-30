@@ -39,7 +39,7 @@ public class ChannelListController implements ActionListener {
     private void openChannel(Channel channel) {
         System.out.println("Opening channel: " + channel.getChannelName());
         // Create the ChannelView and open it
-        ChannelView view = new ChannelView(channel, user.getUsername());
-        view.createComponents();
+        ChannelController view = new ChannelController(channel, user);
+        //view. createComponents();
     }
 }

@@ -51,7 +51,7 @@ public class Main {
 //        });
 
 
-        ReadingProgress readingProgressModel = new ReadingProgress(1000);
+        ReadingProgress readingProgressModel = new ReadingProgress();
         LibraryView libraryView = new LibraryView();
         AddBookForm addBookForm = new AddBookForm();
         LibraryController libraryController = new LibraryController(readingProgressModel, libraryView, addBookForm);
