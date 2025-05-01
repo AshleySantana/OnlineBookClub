@@ -28,6 +28,20 @@ public class MeetingListViewController implements ActionListener {
 
       addActionListeners();
 
+        view.getListofMeetings().addListSelectionListener(e -> {
+            if (!e.getValueIsAdjusting()) {
+                Meeting selected = (Meeting) view.getListofMeetings().getSelectedValue();
+                if (selected != null) {
+                    JOptionPane.showMessageDialog(view.getJPanell(),
+                            "Meeting Name: " + selected.getMeetingName() +
+                                    "\nTime: " + selected.getMeetingTime() +
+                                    "\nLink: " + selected.getMeetingLink(),
+                            "Meeting Info",
+                            JOptionPane.INFORMATION_MESSAGE);
+                }
+            }
+        });
+
     }
 
 
@@ -64,6 +78,28 @@ public class MeetingListViewController implements ActionListener {
 
         Meeting newMeeting = new Meeting(today, now, name, link);
         model.addMeetingtoList(newMeeting);
+
+
+        DefaultListModel<Meeting> listModel = (DefaultListModel<Meeting>) view.getListofMeetings().getModel();
+        listModel.addElement(newMeeting);
+
+    }
+
+    private void findMeeting(){
+        String meetingFind = JOptionPane.showInputDialog(view.getJPanell(), "Enter the meeting name to search:");
+        for (int i=0; i < model.getMeetingList().size();i++){
+            if (model.getMeetingList().get(i).getMeetingName() == meetingFind ){
+                JOptionPane.showMessageDialog(view.getJPanell(), "This is your meeting: " + meetingFind);
+            }
+            else {
+                JOptionPane.showMessageDialog(view.getJPanell(),"No Meeting found");
+            }
+        }
+
+    }
+
+
+    private void deleteMeeting(){
 
     }
 

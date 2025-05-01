@@ -21,6 +21,8 @@ import javax.swing.*;
 public class Main {
     public static void main(String[] args) {
 
+
+
         // Authenticating User
         // to test login, you can use the 2 username & password combinations below:
 
@@ -51,10 +53,12 @@ public class Main {
 //        });
 
 
-        ReadingProgress readingProgressModel = new ReadingProgress(1000);
+        ReadingProgress readingProgressModel = new ReadingProgress();
         LibraryView libraryView = new LibraryView();
         AddBookForm addBookForm = new AddBookForm();
         LibraryController libraryController = new LibraryController(readingProgressModel, libraryView, addBookForm);
+
+
 
 
 
@@ -65,7 +69,7 @@ public class Main {
         MeetingListView meetingListView = new MeetingListView();
         MeetingListViewController controllerMeeting = new MeetingListViewController(meetingsList, meetingListView);
         JFrame frame = new JFrame("Meeting Manager");
-        frame.setContentPane(meetingListView.getJPanell()); // Main panel from your view
+        frame.setContentPane(meetingListView.getJPanell());
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
