@@ -75,4 +75,21 @@ public class AddPaymentController {
     public String getExpirationDate() {
         return expDateInput.getText();
     }
+
+    public JTextField getFirstNameInput() {
+        return firstNameInput;
+    }
+
+    public JTextField getLastNameInput() {
+        return lastNameInput;
+    }
+
+    public JTextField getCreditCardInput() {
+        return creditCardInput;
+    }
+
+    public JTextField getExpDateInput() {
+        return expDateInput;
+    }
+
 }
