@@ -28,6 +28,12 @@ public class TestHarness {
         // testing meeting size
         unitTestCases.testMeetingSize();
 
+
+        //System Test cases
+        SystemTestCases systemTestCases = new SystemTestCases();
+        systemTestCases.testMeetingClick();
+
+
     }
 }
         /*System.out.println("Running Test Harness...:p");
