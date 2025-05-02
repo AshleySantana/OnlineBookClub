@@ -23,6 +23,11 @@ public class TestHarness {
         integrationTestCases.testAddChanneltoSubscribedList();
         integrationTestCases.testSendMessageInChannel();
 
+        //Unit test cases
+        UnitTestCases unitTestCases = new UnitTestCases();
+        // testing meeting size
+        unitTestCases.testMeetingSize();
+
     }
 }
         /*System.out.println("Running Test Harness...:p");
