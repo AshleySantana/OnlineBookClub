@@ -1,4 +1,3 @@
-import Homepage.Model.Book;
 import Channels.Controller.ChannelController;
 import Channels.Model.Channel;
 import MeetingBookClub.Controller.MeetingListViewController;
@@ -10,17 +9,14 @@ import TrackProgress.Model.ReadingProgress;
 import TrackProgress.View.AddBookForm;
 import TrackProgress.View.LibraryView;
 import UserAuthentication.Controller.AuthenticationController;
-import UserAuthentication.Controller.UserProfileController;
 import UserAuthentication.Model.User;
 import UserAuthentication.Model.UserAuthentication;
-import UserAuthentication.View.AuthenticationView;
-import UserAuthentication.View.UserProfileView;
 
 import javax.swing.*;
 
 public class Main {
     public static void main(String[] args) {
-
+        new TestHarness();
 
 
         // Authenticating User
@@ -32,16 +28,15 @@ public class Main {
                     // user: user
                     // pass: pass
 
-        UserAuthentication model = new UserAuthentication();
-        AuthenticationController controller = new AuthenticationController(model);
-        Channel channel = new Channel("Polstergeese");
-        User user = new User("admin", "werna@com", "1234");
-        ChannelController channelController = new ChannelController(channel, user);
+//        UserAuthentication model = new UserAuthentication();
+//        AuthenticationController controller = new AuthenticationController(model);
+//        Channel channel = new Channel("Polstergeese");
+//        User user = new User("admin", "werna@com", "1234");
+//        ChannelController channelController = new ChannelController(channel, user);
+
 //        User model2 = new User();
 //        UserProfileView view2 = new UserProfileView();
 //        UserProfileController profileController = new UserProfileController(model2, view2);
-
-        new TestHarness();
 
 //        SwingUtilities.invokeLater(() -> {
 //            User testUser = new User("admin", "jm", "1234");
@@ -53,11 +48,11 @@ public class Main {
 //        });
 
 
-        ReadingProgress readingProgressModel = new ReadingProgress();
-        LibraryView libraryView = new LibraryView();
-        AddBookForm addBookForm = new AddBookForm();
-        LibraryController libraryController = new LibraryController(readingProgressModel, libraryView, addBookForm);
-
+//        ReadingProgress readingProgressModel = new ReadingProgress();
+//        LibraryView libraryView = new LibraryView();
+//        AddBookForm addBookForm = new AddBookForm();
+//        LibraryController libraryController = new LibraryController(readingProgressModel, libraryView, addBookForm);
+//
 
 
 
@@ -65,14 +60,14 @@ public class Main {
 
         //Meeting
 
-        MeetingsList meetingsList = new MeetingsList();
-        MeetingListView meetingListView = new MeetingListView();
-        MeetingListViewController controllerMeeting = new MeetingListViewController(meetingsList, meetingListView);
-        JFrame frame = new JFrame("Meeting Manager");
-        frame.setContentPane(meetingListView.getJPanell());
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
-        frame.setVisible(true);
+//        MeetingsList meetingsList = new MeetingsList();
+//        MeetingListView meetingListView = new MeetingListView();
+//        MeetingListViewController controllerMeeting = new MeetingListViewController(meetingsList, meetingListView);
+//        JFrame frame = new JFrame("Meeting Manager");
+//        frame.setContentPane(meetingListView.getJPanell());
+//        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        frame.pack();
+//        frame.setVisible(true);
 
 
     }

@@ -19,7 +19,13 @@ import java.util.Date;
 
 public class TestHarness {
     public TestHarness(){
-        System.out.println("Running Test Harness...:p");
+        IntegrationTestCases integrationTestCases = new IntegrationTestCases();
+        integrationTestCases.testAddChanneltoSubscribedList();
+        integrationTestCases.testSendMessageInChannel();
+
+    }
+}
+        /*System.out.println("Running Test Harness...:p");
         //Create Users
         User user1 = new User("JDog51");
         User user2 = new User("JillScott");
@@ -148,3 +154,4 @@ private void log(String string){
     System.out.println(string);
 }
 }
+*/
